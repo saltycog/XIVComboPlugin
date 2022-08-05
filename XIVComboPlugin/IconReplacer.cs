@@ -888,6 +888,17 @@ namespace XIVComboPlugin
                     return RPR.SpinningScythe;
                 }
             }
+            
+            // Custom: Grim Swathe combo
+            {
+                if (actionID == RPR.GrimSwathe)
+                {
+                    if (SearchBuffArray(RPR.Buffs.SoulReaver))
+                        return RPR.Guillotine;
+                    
+                    return RPR.GrimSwathe;
+                }
+            }
 
             return iconHook.Original(self, actionID);
         }
